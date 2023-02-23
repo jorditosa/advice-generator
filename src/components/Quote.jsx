@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
-
+import Loading from './Loading'
 
 function Quote() {
 
   const [ quote, setQuote ] = useState('')
+  const [ loading, setLoading ] = useState(true)
 
   const getQuote = async () => {
 
@@ -17,10 +18,16 @@ function Quote() {
   }, [])
 
   return (
-    <div>
-      <h3 className="quote-title">advice #{quote.id}</h3>
-      <p className="quote">{quote.advice}</p>
-    </div>
+
+    <>
+      {quote === '' ? <Loading /> : (
+        <div>
+          <h3 className="quote-title">advice #{quote.id}</h3>
+          <p className="quote">{quote.advice}</p>
+        </div>
+      )}
+      
+    </>
   )
 }
 

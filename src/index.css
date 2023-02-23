@@ -82,3 +82,14 @@ img {
   box-shadow: 0px 0px 20px 5px var(--Neon-Green);
   cursor: pointer;
 }
+
+
+/*** loading ***/
+
+
+.loading-text {
+  font-size: 28px;
+  color: var(--Light-Cyan);
+  text-align: center;
+  padding: 25px 0;
+}
